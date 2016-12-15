@@ -58,8 +58,9 @@ void loop() {
   if (success) {
     // Found a card!
 
-    Serial.print("Card detected #");
+    Serial.print("Card detected== 42135135 #");
     // turn the four byte UID of a mifare classic into a single variable #
+    //Even though the NFC idntify code is keep changing every 2 mins, the NFC ID code always start at the same code which is 42135135 
     cardidentifier = uid[3];
     cardidentifier <<= 8; cardidentifier |= uid[2];
     cardidentifier <<= 8; cardidentifier |= uid[1];
@@ -78,7 +79,9 @@ void loop() {
             Keyboard.write('8');
              Keyboard.write('a');
               Keyboard.write('c');
+              //type the each password 
               Keyboard.write('\n');
+              // type the "enter" button
             
              for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
